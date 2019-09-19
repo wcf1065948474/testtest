@@ -12,7 +12,7 @@ dataloader = torch.utils.data.DataLoader(celeba_dataset,opt.batchsize,shuffle=Tr
 gan = train.COCOGAN(opt)
 
 
-for e in range(0,5):
+for e in range(0,1):
     start = time.time()
     for real_macro_list in dataloader:
         gan.latent_ebdy_generator.get_latent()

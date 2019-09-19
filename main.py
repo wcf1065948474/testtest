@@ -12,13 +12,14 @@ dataloader = torch.utils.data.DataLoader(celeba_dataset,opt.batchsize,shuffle=Tr
 gan = train.COCOGAN(opt)
 
 
-for e in range(0,100):
+for e in range(0,5):
     start = time.time()
     for real_macro_list in dataloader:
         gan.latent_ebdy_generator.get_latent()
         for pos,real_macro in enumerate(real_macro_list):
-            gan.train(real_macro,pos)
+            gan.train_serial(real_macro,pos)
     print(time.time()-start)
     print(e)
+    gan.generate_serial()
     gan.show_loss()
 #     gan.save_network(e)         

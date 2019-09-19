@@ -8,7 +8,7 @@ class Option(object):
         self.micro_in_macro = 4
         self.macro_in_full = 4
         self.datadir='../input/celeba-dataset/img_align_celeba/img_align_celeba'
-        self.datapath = '../input/celeba-h5py/celeba_img.h5py'
+        self.datapath = '../input/celeba_img.h5py'
         self.macro_size = 32
         self.micro_size = 16
         self.full_size = 64

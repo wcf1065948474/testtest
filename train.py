@@ -255,7 +255,7 @@ class COCOGAN(object):
             tmp_list.append(torch.cat(macro_patches_list[i*hw:i*hw+hw],3))
         full_img = torch.cat(tmp_list,2)
         full_img = tensor2im(full_img)
-        plt.figure(figsize=(3,3))
+        plt.figure(figsize=(2,2))
         plt.axis('off')
         plt.imshow(full_img)
         plt.show()
